@@ -1,0 +1,26 @@
+<html>
+<meta http-equiv="Authorization" content="Basic YWRtaW46YWRtaW4=">
+<script
+  src="https://code.jquery.com/jquery-2.2.4.min.js"
+  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+  crossorigin="anonymous"></script>
+
+<meta http-equiv="refresh">
+<img id="img" src='http://admin:admin@192.168.1.2/tmpfs/auto.jpg'/>
+<style type="text/css">
+	img {
+		width: 100%;
+		height: auto;
+	}
+</style>
+
+<script type="text/javascript" defer>
+	window.onload = function() {
+		var image = document.getElementById("img");
+		function updateImage() {
+			image.src = image.src.split("?")[0] + "?" + new Date().getTime();
+		}
+		setInterval(updateImage, 1000);
+	}
+</script>
+</html>
